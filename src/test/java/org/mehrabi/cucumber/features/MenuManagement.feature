@@ -26,13 +26,13 @@ Feature: Menu Management
     When I add that menu item
     Then Menu Item with name "Cucumber Sandwich" should be added
 
-#  @RegularTest
-#  Scenario: Add another menu item
-#    Given I have a menu item with name "Cucumber Salad" and price 15
-#    When I add that menu item
-#    Then Menu Item with name "Cucumber Salad" should be added
-#
-#  @NightlyBuildTest @RegularTest
-#  Scenario: Add third menu item
-#    Given I have a menu item with name "Chicken Sandwich" and price 15
-#    When I add that menu item
+  @RegularTest
+  Scenario: Add another menu item
+    Given I have a menu item with name "Cucumber Salad" and price 15
+    When I add that menu item
+    Then Menu Item with name "Cucumber Salad" should be added
+
+  @NightlyBuildTest @RegularTest
+  Scenario: Add third menu item
+    Given I have a menu item with name "Chicken Sandwich" and price 15
+    When I add that menu item

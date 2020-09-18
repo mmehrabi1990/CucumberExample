@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/java/org/mehrabi/cucumber/features"},
         tags ="@NightlyBuildTest or @RegularTest",
-        glue = {"stepdefinitions"},
+        glue = {"org.mehrabi.stepdefinitions"},
         plugin = {"pretty"}
         )
 public class MenuManagementTest {
