@@ -3,14 +3,16 @@ package org.mehrabi;
 import java.text.DecimalFormat;
 
 public class BillCalculationHelper {
+	private BillCalculationHelper() {
+	}
 
-	public static double CalculateBillForCustomer(double BillAmount, double taxrate) {
+	public static double calculateBillForCustomer(double billAmount, double taxrate) {
 
-		double FinalBillAmount = BillAmount * (1 + taxrate / 100);
+		double finalBillAmount = billAmount * (1 + taxrate / 100);
 
 		DecimalFormat df = new DecimalFormat("0.00");
 
-		String result = df.format(FinalBillAmount);
+		String result = df.format(finalBillAmount);
 
 		return Double.parseDouble(result);
 

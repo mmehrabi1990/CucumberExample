@@ -8,7 +8,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/java/org/mehrabi/cucumber/features"},
-        tags ="@NightlyBuildTest or @RegularTest",
+//        tags ="@NightlyBuildTest or @RegularTest",
+//        tags ="not @NightlyBuildTest",
+//        tags ="@NightlyBuildTest and @RegularTest",
         glue = {"org.mehrabi.stepdefinitions"},
         plugin = {"pretty"}
         )

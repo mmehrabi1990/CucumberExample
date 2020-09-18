@@ -20,6 +20,10 @@
 
 Feature: Menu Management
 
+  Background: Setup a menu item
+    Given I have a menu item with name "Chicken Sandwich" and price 15
+    When I add that menu item
+
   @SmokeTest
   Scenario: Add a menu item
     Given I have a menu item with name "Cucumber Sandwich" and price $20
@@ -36,3 +40,4 @@ Feature: Menu Management
   Scenario: Add third menu item
     Given I have a menu item with name "Chicken Sandwich" and price 15
     When I add that menu item
+    Then I should se an error message with value "Duplicate Item"
